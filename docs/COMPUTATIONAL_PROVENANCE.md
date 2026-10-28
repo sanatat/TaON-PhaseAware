@@ -2,7 +2,7 @@
 
 ## Data-source distinction
 
-The project archive `TaON-PhaseAware-v4(1).zip` uploaded on 2026-10-28 contains the literature-analysis source code and planning documentation, **not** the completed Quantum ESPRESSO 7.5 calculations. All numerical defect results currently in `results/terminal_reported_pilot.csv` were copied from local terminal output shared in the research discussion. They should be treated as preliminary researcher-reported results until the original logs and optimized CIFs are supplied.
+The project archive `TaON-PhaseAware-v4(1).zip` uploaded on 2026-10-28 contains the literature-analysis source code and planning documentation, **not** the completed Quantum ESPRESSO 7.5 calculations. Original QE output text files and relaxed CIFs have now been supplied and published in this repository. The values in `results/summary.csv` were checked against the final `qe/VO/relax_restart_04.out` and `qe/VN/relax_restart_06.out`. The separate `results/terminal_reported_pilot.csv` remains a historical transcription.
 
 ## Reported electronic and ionic settings
 
@@ -15,13 +15,13 @@ The project archive `TaON-PhaseAware-v4(1).zip` uploaded on 2026-10-28 contains 
 - Time-limited BFGS runs were continued through QE checkpoints, VO through restart_04 and VN through restart_06. Both were reported `bfgs converged`.
 - Final max Cartesian force components below the stated `forc_conv_thr=0.001 Ry/Bohr`, per terminal reports.
 
-## Independent verification still required
+## Publication status and remaining scientific validation
 
-1. Upload `dft/structures/relaxed/VO23_relaxed.cif`, `VN23_relaxed.cif` and `beta_TaON_relaxed.cif`.
-2. Upload the spin-polarized defect SCF inputs/outputs and ionic relaxation input/output text files, preserving the sequential logs.
-3. Redact personal local filesystem paths and any accidental credentials before committing. **Never** include Materials Project API keys or software login tokens.
-4. Parse total energies, compositions, forces and BFGS convergence from uploaded logs, and recompute minimum-image displacements against the initial structures.
-5. Attach pseudopotential metadata and file checksums, not licensed or bulky binary pseudopotential files.
+1. **Complete:** the three final CIFs are now published under `structures/`.
+2. **Complete:** spin-polarized SCF and sequential ionic relaxation inputs/outputs are published under `qe/VO/` and `qe/VN/`.
+3. Do not publish API keys, personal access tokens or proprietary pseudopotential binaries. The QE logs may contain local file paths.
+4. **Partially complete:** final energies, force norms, magnetization and BFGS convergence were checked against uploaded logs; minimum-image displacements were tabulated from the user's local ASE analysis. Independent reproduction remains to be done.
+5. **Complete in part:** pseudopotential metadata, file names and MD5 hashes were recorded under `metadata/sssp_cutoffs.json`; binaries are intentionally excluded.
 6. Compute matched pristine electronic reference and test vacancy formation-energy sensitivity to cell size, k sampling, occupation, ionic force threshold, charge/spin configurations and chemical potentials.
 
 ## Scientific interpretation
