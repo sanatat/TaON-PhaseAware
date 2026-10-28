@@ -4,7 +4,7 @@
 
 This repository documents a low-memory Quantum ESPRESSO 7.5 study conducted in October 2026. The numerical results were **cross-checked on 28 October 2026 against the original final QE output files contained in a separately supplied local archive**. A log verification report and SHA-256 checksums are available in [docs/LOG_VERIFICATION_2026-10-28.md](docs/LOG_VERIFICATION_2026-10-28.md).
 
-**Important status:** the GitHub repository currently contains the verified CSV summary, per-atom displacement table, pseudopotential metadata and verification documentation. The complete QE input/output text logs and optimized CIF files are present in the local `TaON-PhaseAware-GitHub.zip` archive, **but have not yet been committed to GitHub**. Avoid representing this GitHub repository alone as fully independently reproducible until those source artifacts are added.
+**Important status:** the GitHub repository currently contains the verified CSV summary, per-atom displacement table, pseudopotential metadata and verification documentation. The three optimized CIF structures **are now committed** to GitHub. The full QE input/output text logs remain in the supplied local `TaON-PhaseAware-GitHub.zip` archive and have not yet been committed. Avoid representing this GitHub repository alone as fully independently reproducible until those source artifacts are added.
 
 ## Verified preliminary numerical results
 
@@ -29,7 +29,8 @@ Values correspond to one selected neutral vacancy per 24-atom supercell (23 rema
 - [metadata/sssp_cutoffs.json](metadata/sssp_cutoffs.json): pseudopotential metadata.
 - [docs/LOG_VERIFICATION_2026-10-28.md](docs/LOG_VERIFICATION_2026-10-28.md): direct checks of original log outputs and cryptographic hashes.
 - [docs/COMPUTATIONAL_PROVENANCE.md](docs/COMPUTATIONAL_PROVENANCE.md): methods, assumptions and planned validation.
-- **Pending source-file commit:** `structures/*.cif`, `qe/{VO,VN}/*.in` and `*.out`, included in the supplied workstation archive.
+- [structures/](structures/): pristine TaON, relaxed VO and VN CIFs.
+- **Pending source-file commit:** `qe/{VO,VN}/*.in` and `*.out`, included in the supplied workstation archive.
 
 ## Scientific interpretation and limitations
 
