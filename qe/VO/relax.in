@@ -1,0 +1,81 @@
+&CONTROL
+    calculation = 'relax',
+    restart_mode = 'from_scratch',
+    outdir = '${PROJECT_ROOT}/dft/runs/VO23_relax_lowmem/tmp',
+    prefix = 'taon_vo23_relax',
+    disk_io = 'high',
+   pseudo_dir       = '${PROJECT_ROOT}/dft/pseudo'
+    max_seconds = 2400,
+    nstep = 25,
+    etot_conv_thr = 1.0d-5,
+    forc_conv_thr = 1.0d-3,
+    tprnfor = .true.,
+/
+&SYSTEM
+   ecutwfc          = 78
+   ecutrho          = 624
+   occupations      = 'smearing'
+   degauss          = 0.005
+   smearing         = 'gaussian'
+   nspin            = 2
+   ntyp             = 3
+   nat              = 23
+   ibrav            = 0
+    starting_magnetization(1) = 0.05,
+    starting_magnetization(2) = 0.0,
+    starting_magnetization(3) = 0.0,
+/
+&ELECTRONS
+    electron_maxstep = 70,
+   conv_thr         = 1e-06
+    mixing_beta = 0.2,
+    mixing_ndim = 3,
+   diagonalization  = 'cg'
+/
+&IONS
+
+    ion_dynamics = 'bfgs',
+/
+&CELL
+/
+&FCP
+/
+&RISM
+/
+ATOMIC_SPECIES
+Ta  180.94788 Ta_pbe_v1.uspp.F.UPF
+N  14.007 N.pbe-n-radius_5.UPF
+O  15.999 O.pbe-n-kjpaw_psl.0.1.UPF
+
+K_POINTS gamma
+
+CELL_PARAMETERS angstrom
+9.95828584000000 0.00000000000000 0.00000000000000
+0.00000000000000 5.04121064000000 0.00000000000000
+-0.86269343432784 0.00000000000000 5.12315292328383
+
+ATOMIC_POSITIONS angstrom
+Ta  0.8454105239 2.2916391132 3.6676059890  
+Ta  2.8396922447 4.8122444332 4.0171233959  
+Ta  3.2710389618 2.7495715268 1.4555469343  
+Ta  1.2767572410 0.2289662068 1.1060295273  
+N  1.3562225874 3.7506651136 5.0212381494  
+N  2.3288801811 1.2300597936 2.6634912355  
+N  2.7602268982 1.2905455264 0.1019147739  
+N  1.7875693046 3.8111508464 2.4596616878  
+O  4.5371976691 4.1626306965 0.7859891696  
+O  4.1058509520 3.3991852635 3.3475656312  
+O  -0.4207481835 0.8785799435 4.3371637537  
+Ta  5.8245534439 2.2916391132 3.6676059890  
+Ta  7.8188351647 4.8122444332 4.0171233959  
+Ta  8.2501818818 2.7495715268 1.4555469343  
+Ta  6.2559001610 0.2289662068 1.1060295273  
+N  6.3353655074 3.7506651136 5.0212381494  
+N  7.3080231011 1.2300597936 2.6634912355  
+N  7.7393698182 1.2905455264 0.1019147739  
+N  6.7667122246 3.8111508464 2.4596616878  
+O  4.9897414537 1.6420253765 1.7755872921  
+O  9.5163405891 4.1626306965 0.7859891696  
+O  9.0849938720 3.3991852635 3.3475656312  
+O  4.5583947365 0.8785799435 4.3371637537  
+
