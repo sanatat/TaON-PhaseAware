@@ -1,0 +1,3 @@
+vacancy,formula,atoms,initial_energy_Ry,relaxed_energy_Ry,relax_energy_drop_eV,total_magnetization_muB,mean_displacement_A,max_displacement_A,final_total_force_Ry_per_Bohr,final_max_force_component_Ry_per_Bohr,converged_BFGS
+VO,Ta8N8O7,23,-1589.86304583,-1589.90854898,0.619102,0.0000,0.073734,0.134466,0.00153500,0.00045211,True
+VN,Ta8N7O8,23,-1611.43001577,-1611.49329867,0.861008,0.9900,0.097689,0.262767,0.00202400,0.00058233,True
