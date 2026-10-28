@@ -1,0 +1,14 @@
+# Do not commit QE temporary data, wavefunctions or secrets
+**/tmp/
+**/*.save/
+**/*.wfc*
+**/*.igk
+**/*.mix*
+**/*.restart
+**/*.bfgs
+**/*.UPF
+**/*.upf
+.venv/
+__pycache__/
+.env
+*.zip
