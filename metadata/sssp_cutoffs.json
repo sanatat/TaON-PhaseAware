@@ -1,0 +1,23 @@
+{
+  "Ta": {
+    "filename": "Ta_pbe_v1.uspp.F.UPF",
+    "md5": "f8bbe9446314a3b8ea5d9f3e3836c939",
+    "pseudopotential": "GBRV-1.2",
+    "cutoff_wfc": 45.0,
+    "cutoff_rho": 360.0
+  },
+  "N": {
+    "filename": "N.pbe-n-radius_5.UPF",
+    "md5": "16739722b17309cd8fe442a2ace49922",
+    "pseudopotential": "THEOS",
+    "cutoff_wfc": 60.0,
+    "cutoff_rho": 480.0
+  },
+  "O": {
+    "filename": "O.pbe-n-kjpaw_psl.0.1.UPF",
+    "md5": "0234752ac141de4415c5fc33072bef88",
+    "pseudopotential": "031PAW",
+    "cutoff_wfc": 50.0,
+    "cutoff_rho": 400.0
+  }
+}
